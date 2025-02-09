@@ -26,25 +26,44 @@ This enhancement focused on addressing these challenges through four major impro
 - **Solution:** Developed a comprehensive suite of unit tests in `test_crud_operations.py` to validate CRUD operations. A separate `test_animals` collection was used to prevent interference with production data.
 - **Impact:** Improved reliability by proactively identifying potential issues and established a robust foundation for future development.
 
-## Impact of Enhancements
-These improvements address critical limitations in the original application and elevate its performance, security, and reliability:
-- **Query Optimization:** Faster and more efficient data retrieval ensures a smooth user experience, even with larger datasets.
-- **Credential Security:** Adherence to secure coding practices eliminates the risk of exposing sensitive information.
-- **Error Management:** Structured error handling and centralized logging simplify debugging and enhance user experience.
-- **Testing Strategy:** A robust unit testing suite ensures CRUD operations work as expected, reducing downtime and enabling confident development.
-
 ## Screenshots
 ### Enhancement 3
-- **Dash_Filter:** Dashboard filtering in action.
-- **Dash_Modules:** Code for enhanced dashboard integration.
-- **Indexes:** MongoDB indexes for optimized query performance.
-- **Log:** Example of centralized error logging.
-- **Test_Crud:** Successful unit test execution for CRUD operations.
-- **User_Pass:** Environment variables used for secure credential storage.
-- **User_Pass_Global:** Global credential setup validation.
+- **Dash_Filter:** Dashboard filtering in action  
+  ![Dash_Filter](Screenshots/Enhancement%203/Dash_Filter.png)
+
+- **Dash_Modules:** Code for enhanced dashboard integration  
+  ![Dash_Modules](Screenshots/Enhancement%203/Dash_Modules.png)
+
+- **Indexes:** MongoDB indexes for optimized query performance  
+  ![Indexes](Screenshots/Enhancement%203/Indexes.png)
+
+- **Log:** Example of centralized error logging  
+  ![Log](Screenshots/Enhancement%203/Log.png)
+
+- **Test_Crud:** Successful unit test execution for CRUD operations  
+  ![Test_Crud](Screenshots/Enhancement%203/Test_Crud.png)
+
+- **User_Pass:** Environment variables used for secure credential storage  
+  ![User_Pass](Screenshots/Enhancement%203/User_Pass.png)
+
+- **User_Pass_Global:** Global credential setup validation  
+  ![User_Pass_Global](Screenshots/Enhancement%203/User_Pass_Global.png)
 
 ### Project 2 Screenshots
-- **Disaster, Mountain, Reset, Startup, Water:** Original dashboard filtering based on rescue type.
+- **Disaster:** Original dashboard filtering based on rescue type  
+  ![Disaster](Screenshots/Project%202%20Screenshots/Disaster.png)
+
+- **Mountain:** Original dashboard filtering based on rescue type  
+  ![Mountain](Screenshots/Project%202%20Screenshots/Mountain.png)
+
+- **Reset:** Original dashboard filtering based on rescue type  
+  ![Reset](Screenshots/Project%202%20Screenshots/Reset.png)
+
+- **Startup:** Original dashboard filtering based on rescue type  
+  ![Startup](Screenshots/Project%202%20Screenshots/Startup.png)
+
+- **Water:** Original dashboard filtering based on rescue type  
+  ![Water](Screenshots/Project%202%20Screenshots/Water.png)
 
 ## Conclusion
-The Grazioso Salvare Dashboard is now a more efficient, secure, and reliable tool for managing rescue animal data. These enhancements demonstrate my proficiency in database management, secure practices, and testing, aligning with CS-499 outcomes and industry standards.
+The Grazioso Salvare Dashboard is now a more efficient, secure, and reliable tool for managing rescue animal data. Through query optimization, credential security, structured error handling, and unit testing, this enhancement demonstrates my proficiency in database management and secure software practices, aligning with CS-499 outcomes and industry standards.
