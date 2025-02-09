@@ -1,61 +1,50 @@
-<p align="center">
-  
-![Grazioso Salvare Logo](https://github.com/JPDengler/Client-Server-Development-CS-340-/assets/130941901/8a505730-3fad-4d7a-ba25-195e84106fc2)
+# Grazioso Salvare Dashboard Enhancement Repository
 
-</p>
+## Overview
+The Grazioso Salvare Dashboard is a real-time data visualization and filtering tool designed to assist animal rescue organizations in analyzing and managing rescue animal data. It uses MongoDB for database storage and retrieval, along with Dash and Plotly for a dynamic user interface. However, the initial application had several limitations in its database operations, including inefficient query performance, hardcoded credentials, limited error handling, and the absence of formal testing for its CRUD operations. 
 
-## Project Description
-The Grazioso Salvare Dashboard is an interactive web application designed to filter and display data on animal outcomes from the Austin Animal Center. The dashboard includes interactive filtering options, an interactive data table, a geolocation chart, and a pie chart.
+This enhancement focused on addressing these challenges through four major improvements: query optimizations, secure credential handling, structured error management, and the development of unit tests for CRUD functionality. These updates align with industry best practices for scalable, secure, and efficient database solutions while significantly improving the application’s usability and maintainability.
 
-## Tools Used
-- **Python**: Used for scripting and data manipulation.
-- **Dash**: Framework for building web applications.
-- **MongoDB**: Database used for storing and retrieving animal data.
-- **Plotly**: Used for creating interactive charts and graphs.
+## Key Enhancements
+### 1. Query Optimization
+- **Issue:** Frequently queried fields (`breed`, `location`, `animal_type`) lacked indexing, leading to slower data retrieval.
+- **Solution:** Added MongoDB indexes to these fields using the `createIndex()` method and verified them with `getIndexes()`.
+- **Impact:** Enhanced query performance, ensuring near-instantaneous filtering and improved scalability for larger datasets.
 
-## MongoDB Explanation
-MongoDB was chosen for its flexibility in handling large volumes of unstructured data and its ability to easily interface with Python through the pymongo library.
+### 2. Secure Credential Storage
+- **Issue:** Hardcoded database credentials in the source code posed significant security risks.
+- **Solution:** Replaced hardcoded credentials with environment variables using Python’s `os.getenv()` function.
+- **Impact:** Strengthened security by eliminating sensitive data from the codebase and improved maintainability by allowing credential updates without modifying the code.
 
-## Dash Framework Explanation
-Dash provides a simple yet powerful framework for building web applications with Python. It supports interactive, real-time data visualization and integrates seamlessly with Plotly for creating charts and maps.
+### 3. Structured Error Handling
+- **Issue:** Errors during CRUD operations were only printed to the console, making debugging difficult and reducing reliability.
+- **Solution:** Implemented structured error handling using Python’s `try-except` blocks and centralized error logging in a file (`crud_operations.log`).
+- **Impact:** Improved debugging efficiency, streamlined issue tracking, and enhanced application reliability with user-friendly error feedback.
 
-## Steps Taken
-1. **Setup MongoDB and Python Environment**.
-2. **Develop CRUD Operations**: Implemented in `ModuleJosephDengler.py`.
-3. **Build Dashboard Layout**: Created interactive filters, data table, and charts in `ProjectTwoDashboard.ipynb`.
-4. **Implement Callbacks**: Added interactivity to update charts and data table based on filter selections.
-5. **Testing and Debugging**: Ensured all components work as expected.
+### 4. Unit Testing for CRUD Operations
+- **Issue:** No formal tests existed to validate CRUD functionality, increasing the risk of undetected bugs.
+- **Solution:** Developed a comprehensive suite of unit tests in `test_crud_operations.py` to validate CRUD operations. A separate `test_animals` collection was used to prevent interference with production data.
+- **Impact:** Improved reliability by proactively identifying potential issues and established a robust foundation for future development.
 
-## Challenges and Solutions
-- **Authentication Errors**: Adjusted the initialization parameters in the CRUD module to resolve authentication issues.
-- **Interactive Filtering**: Debugged issues with filter options not updating correctly by refining the MongoDB queries.
+## Impact of Enhancements
+These improvements address critical limitations in the original application and elevate its performance, security, and reliability:
+- **Query Optimization:** Faster and more efficient data retrieval ensures a smooth user experience, even with larger datasets.
+- **Credential Security:** Adherence to secure coding practices eliminates the risk of exposing sensitive information.
+- **Error Management:** Structured error handling and centralized logging simplify debugging and enhance user experience.
+- **Testing Strategy:** A robust unit testing suite ensures CRUD operations work as expected, reducing downtime and enabling confident development.
 
 ## Screenshots
-### Starting State
-![Startup](https://github.com/JPDengler/Client-Server-Development-CS-340-/assets/130941901/5d12f7ff-a5b3-4930-bc84-234f5aa3c498)
+### Enhancement 3
+- **Dash_Filter:** Dashboard filtering in action.
+- **Dash_Modules:** Code for enhanced dashboard integration.
+- **Indexes:** MongoDB indexes for optimized query performance.
+- **Log:** Example of centralized error logging.
+- **Test_Crud:** Successful unit test execution for CRUD operations.
+- **User_Pass:** Environment variables used for secure credential storage.
+- **User_Pass_Global:** Global credential setup validation.
 
+### Project 2 Screenshots
+- **Disaster, Mountain, Reset, Startup, Water:** Original dashboard filtering based on rescue type.
 
-### Water Rescue Filter
-![Water](https://github.com/JPDengler/Client-Server-Development-CS-340-/assets/130941901/3febf4d2-3053-421d-b667-862e9778347d)
-
-
-### Mountain or Wilderness Rescue Filter
-![Mountain](https://github.com/JPDengler/Client-Server-Development-CS-340-/assets/130941901/3e706371-4ab2-49ea-9a95-78a41fec5a79)
-
-
-### Disaster or Individual Tracking Filter
-![Disaster](https://github.com/JPDengler/Client-Server-Development-CS-340-/assets/130941901/e0e02431-61a3-4ffe-b403-caeb6e86969e)
-
-
-### Reset Filter
-![Reset](https://github.com/JPDengler/Client-Server-Development-CS-340-/assets/130941901/057a4856-8af0-47af-81a9-69e0367f1832)
-
-
-## Resources
-- [Dash Documentation](https://dash.plotly.com/)
-- [MongoDB Documentation](https://docs.mongodb.com/)
-
-## Contact
-Joseph Dengler
-- [GitHub](https://github.com/JPDengler/)
-- [Email](mailto:jp.dengler@gmail.com)
+## Conclusion
+The Grazioso Salvare Dashboard is now a more efficient, secure, and reliable tool for managing rescue animal data. These enhancements demonstrate my proficiency in database management, secure practices, and testing, aligning with CS-499 outcomes and industry standards.
